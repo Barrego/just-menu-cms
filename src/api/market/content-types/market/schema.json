@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "markets",
+  "info": {
+    "singularName": "market",
+    "pluralName": "markets",
+    "displayName": "Market",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "unique": false
+    }
+  }
+}

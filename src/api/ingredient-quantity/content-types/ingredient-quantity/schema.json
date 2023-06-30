@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingredients_quantity",
+  "info": {
+    "singularName": "ingredient-quantity",
+    "pluralName": "ingredients-quantity",
+    "displayName": "Ingredient Quantity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ingredient": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ingredient.ingredient"
+    },
+    "quantity": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "dish": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dish.dish",
+      "inversedBy": "ingredient_quantities"
+    }
+  }
+}

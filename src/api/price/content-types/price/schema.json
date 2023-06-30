@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prices",
+  "info": {
+    "singularName": "price",
+    "pluralName": "prices",
+    "displayName": "Price",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ingredient": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ingredient.ingredient",
+      "inversedBy": "prices"
+    },
+    "market": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::market.market"
+    },
+    "amount": {
+      "min": 0,
+      "required": true,
+      "type": "decimal"
+    },
+    "urlProduct": {
+      "type": "string"
+    }
+  }
+}
